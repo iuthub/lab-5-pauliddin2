@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
 	<head>
 		<title>Buy Your Way to a Better Education!</title>
 		<link href="buyagrade.css" type="text/css" rel="stylesheet" />
@@ -15,25 +15,35 @@
 		<hr />
 		
 		<h2>Give Us Your Money</h2>
-		<dl>
+		<form action="sucker.php" method="POST">
 			<dt>Name</dt>
 			<dd>
-				???
+					First Name: <input type="text" name="firstname">
+				<span class="error">* <?php echo $nameErr;?></span>
+					Last Name: <input type="text" name="lastname">
 			</dd>
 			
 			<dt>Section</dt>
 			<dd>
-				???
+<select name="op[]">
+	<option>MA</option>
+	<option>BA</option>
+	<option>PHD</option>
+</select>
 			</dd>
 			
 			<dt>Credit Card</dt>
 			<dd>
-				???
+				<input type="password" name="CardNumber">
+				<input type="checkbox" name="Card[]" value="Visa">Visa
+				<input type="checkbox" name="Card[]" value="MasterCard">MasterCard
+
 			</dd>
-		</dl>
-		
+
 		<div>
-			I am a giant sucker.
+			<input type="submit" value="I am a giant sucker.">
 		</div>
+		</form>
+
 	</body>
 </html>
